@@ -53,4 +53,12 @@ class ProductTest < ActiveSupport::TestCase
     assert !product.save
     assert_equal I18n.translate('activerecord.errors.messages.taken'), product.errors[:title].join('; ')
   end
+  test "product description should be not more than 80 chars" do
+    product = Product.new(title: "book title",
+                          description: 90.times.map{ "a" }.join,
+                          price: 1,
+                          image_url: "jack.gif")
+    assert product.invalid?
+    assert_equal I18n.translate('errors.messages.too_long', count: 80), product.errors[:description].join('; ')
+  end
 end
