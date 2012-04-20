@@ -8,4 +8,14 @@ class ApplicationController < ActionController::Base
       session[:cart_id] = cart.id
       cart
     end
+    def inc_index_page_counter
+      if session[:counter].nil?
+        session[:counter] = 1
+      else
+        session[:counter] += 1
+      end
+    end
+    def reset_index_page_counter
+      session[:counter] = nil
+    end
 end

@@ -23,6 +23,7 @@ end
 gem 'jquery-rails'
 group :development do
   gem 'autotest'
+  #gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 # To use ActiveModel has_secure_password
@@ -38,4 +39,3 @@ end
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'

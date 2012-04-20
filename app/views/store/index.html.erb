@@ -2,6 +2,11 @@
   <p id="notice"><%= notice %></p>
 <% end %>
 <h1> Your Pragmatic Catalog</h1>
+<% if @times_accessed > 5 %>
+  <h2> 
+    You have accessed this page <%= pluralize(@times_accessed, 'times') %>
+  </h2>
+<% end %>
 
 <% @products.each do |product|%>
   <div class="entry">
