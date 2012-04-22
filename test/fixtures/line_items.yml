@@ -7,3 +7,10 @@ one:
 two:
   product_id: 1
   cart_id: 1
+
+ruby:
+  product_id: 3
+  cart_id: 1
+coffescript:
+  product_id: 4
+  cart_id: 1
