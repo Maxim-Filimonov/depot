@@ -21,9 +21,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
-group :development do
+group :development,:test do
   gem 'autotest'
-  #gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'pry'
+  gem 'pry-debugger'
 end
 
 # To use ActiveModel has_secure_password

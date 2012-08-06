@@ -6,7 +6,7 @@ class Product < ActiveRecord::Base
     with: %r{\.(gif|jpg|png)$}i,
     message: "must be a URL for GIF,JPG or PNG image."
   }
-  validates_length_of :description, maximum: 80
+  validates_length_of :description, maximum: 160
   attr_accessible :description, :image_url, :price, :title
 
   has_many :line_items
